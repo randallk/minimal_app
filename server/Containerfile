@@ -1,0 +1,9 @@
+# -*- mode: Dockerfile -*-
+FROM python:3.9
+WORKDIR /srv
+RUN pip install flask
+EXPOSE 8080
+COPY main.py /srv/
+ENV FLASK_APP main.py
+ENV FLASK_ENV production
+CMD ["flask", "run", "-h", "0.0.0.0", "-p", "8080"]

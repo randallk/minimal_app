@@ -1,0 +1,22 @@
+OK so I want to set up a super minimal app that has a lot of different
+components so I can set up a kubernetes.
+
+1- minimal web app.  just return 'hi'
+2- web app tester.  just a pytest that checks for 'hi'
+3- jenkins
+4- kubernetes
+5- database
+
+
+We need a git server.  Let's set it up on xps first, then in a docker
+container, then maybe on linode or something.
+
+Meh just gonna use a git user on my system and let jenkins connect via ssh.
+Don't need a git webserver.  Can set that up later.
+
+stock Jenkins docker image doesn't have docker support ... so how does that work?
+Can I build docker images in a jenkins docker, or do I need to run it natively?
+
+
+
+

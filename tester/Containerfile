@@ -1,0 +1,7 @@
+# -*- mode: dockerfile -*-
+FROM python:3.9
+RUN pip install requests pytest
+RUN mkdir /app
+WORKDIR /app
+COPY test.py /app
+CMD ["pytest", "test.py", "--color=yes"]
